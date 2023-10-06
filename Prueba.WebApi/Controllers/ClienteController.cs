@@ -34,5 +34,34 @@ namespace Prueba.WebApi.Controllers
                 throw;
             }
         }
+
+        [HttpPut]
+        public async Task<IHttpActionResult> Update(Cliente cliente)
+        {
+            try
+            {
+                await _clienteService.UpdateAsync(cliente);
+                return Ok();
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpGet]
+        public async Task<Cliente> Get(int id)
+        {
+            try
+            {
+                return await _clienteService.GetByIdAsync(id);
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

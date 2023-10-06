@@ -10,5 +10,6 @@ namespace Prueba.Persistencia
         Task<int> MaxIdAsync();
         Task CreateAsync(Cliente entity);
         Task UpdateAsync(Cliente entity);
+        Task<Cliente> GetByIdAsync(int id);
     }
 }

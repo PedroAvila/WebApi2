@@ -8,5 +8,7 @@ namespace Prueba.Services
     {
         Task<IEnumerable> GetAllAsync();
         Task CreateAsync(Cliente entity);
+        Task UpdateAsync(Cliente entity);
+        Task<Cliente> GetByIdAsync(int id);
     }
 }

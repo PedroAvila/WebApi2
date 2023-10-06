@@ -23,5 +23,14 @@ namespace Prueba.Services
             await _clienteRepository.CreateAsync(entity);
         }
 
+        public async Task UpdateAsync(Cliente entity)
+        {
+            await _clienteRepository.UpdateAsync(entity);
+        }
+
+        public Task<Cliente> GetByIdAsync(int id)
+        {
+            return _clienteRepository.GetByIdAsync(id);
+        }
     }
 }
